@@ -6,8 +6,8 @@ CREATE TABLE IF NOT EXISTS public.entities (
   user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE NOT NULL,
 
   -- Proposal fields
-  proposal_name TEXT NOT NULL,
-  client TEXT NOT NULL,
+  title TEXT NOT NULL,
+  client_name TEXT NOT NULL,
   total_amount NUMERIC(10,2) NOT NULL,
   status TEXT NOT NULL DEFAULT 'draft',
   date_sent DATE,
