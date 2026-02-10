@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'QuoteDrop - Professional quotes in seconds, not hours',
-  description: 'A client proposal and quote builder for freelancers with shareable links, instant notifications, and win/loss analytics.',
+  title: 'QuoteDrop - Professional quotes in 60 seconds. Win more clients.',
+  description: 'A fast quote builder for freelancers — create, send, and track professional client proposals in seconds.',
 };
 
 export default function RootLayout({

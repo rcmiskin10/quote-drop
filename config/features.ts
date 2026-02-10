@@ -28,7 +28,7 @@ export const featuresConfig: FeaturesConfig = {
   api: false,
   auth: true,
   billing: true,
-  blog: false,
+  blog: true,
   email: true,
   entityCrud: true,
   entityExport: false,

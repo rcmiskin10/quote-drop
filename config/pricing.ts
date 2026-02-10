@@ -24,24 +24,24 @@ export const pricingConfig: {
   model: 'freemium',
 
   defaultLimits: {
-    entities: 5
+    proposals: 5
   },
 
   plans: [
     {
       id: 'free',
-      name: 'Free Forever',
+      name: 'Free',
       description: 'Everything you need to start sending professional quotes',
       price: { monthly: 0 },
       limits: {
-        entities: 5
+        proposals: 5
       },
       features: [
         'Up to 5 active quotes per month',
-        'All core templates included',
+        'All vertical-specific templates',
         'Shareable quote links',
         'Real-time open & acceptance notifications',
-        'Basic dashboard with status tracking',
+        'Pipeline dashboard',
         'QuoteDrop branding on quotes'
       ],
       cta: 'Get Started Free',
@@ -49,46 +49,45 @@ export const pricingConfig: {
     {
       id: 'pro',
       name: 'Pro',
-      description: 'For freelancers who are serious about winning more work',
-      price: { monthly: 15, yearly: 144 },
+      description: 'For freelancers ready to win more clients and look fully professional',
+      price: { monthly: 16, yearly: 144 },
       priceId: process.env.STRIPE_PRICE_PRO,
       limits: {
-        entities: -1
+        proposals: -1
       },
       features: [
         'Unlimited quotes',
         'Remove QuoteDrop branding',
-        'Custom branding (logo, colors)',
-        'Win/loss analytics dashboard',
-        'Quote-to-invoice conversion',
-        'Stripe & PayPal payment links',
-        'Revision tracking & version history',
+        'Custom branding (logo & colors)',
+        'Full win/loss analytics dashboard',
+        'Automated follow-up reminders',
         'Custom domain for quote links',
+        'PDF export',
+        'Stripe & PayPal integrations',
         'Priority email support'
       ],
       highlighted: true,
-      cta: 'Start Pro — 14 Days Free',
+      cta: 'Start Free Trial',
     },
     {
-      id: 'studio',
-      name: 'Studio',
-      description: 'For freelancers growing into small agencies',
-      price: { monthly: 35, yearly: 336 },
-      priceId: process.env.STRIPE_PRICE_STUDIO,
+      id: 'business',
+      name: 'Business',
+      description: 'For growing freelancers and small agencies scaling up',
+      price: { monthly: 29, yearly: 290 },
+      priceId: process.env.STRIPE_PRICE_BUSINESS,
       limits: {
-        entities: -1
+        proposals: -1
       },
       features: [
         'Everything in Pro',
-        'Up to 5 team members included',
-        'AI-powered pricing suggestions',
-        'Advanced analytics (close rate by service, client, period)',
-        'Client portal with proposal history',
-        'API access & Zapier integration',
-        'Advanced template design editor',
-        'Phone support'
+        'Team collaboration (up to 5 users)',
+        'Client portal',
+        'API access',
+        'AI-powered close rate insights',
+        'White-label capabilities',
+        'Dedicated account support'
       ],
-      cta: 'Start Studio Trial',
+      cta: 'Contact Sales',
     }
   ],
 }
