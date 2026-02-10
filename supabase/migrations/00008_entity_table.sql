@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS public.entities (
   client TEXT NOT NULL,
   total_amount NUMERIC(10,2) NOT NULL,
   status TEXT NOT NULL DEFAULT 'draft',
-  sent_date DATE,
+  date_sent DATE,
   acceptance_date DATE,
   shareable_link TEXT,
 
