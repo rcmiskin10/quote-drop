@@ -51,20 +51,20 @@ export const entityConfig: EntityConfig = {
 
   fields: [
     {
-      name: 'proposal_name',
-      label: 'Proposal Name',
+      name: 'title',
+      label: 'Proposal Title',
       type: 'text',
       required: true,
-      placeholder: 'e.g., Website Redesign for Acme Corp',
+      placeholder: 'e.g., Website Redesign for Acme Corp.',
       showInList: true,
       showInForm: true,
     },
     {
-      name: 'client',
-      label: 'Client',
+      name: 'client_name',
+      label: 'Client Name',
       type: 'text',
       required: true,
-      placeholder: 'e.g., Acme Corp',
+      placeholder: 'e.g., Acme Corp.',
       showInList: true,
       showInForm: true,
     },
@@ -73,7 +73,7 @@ export const entityConfig: EntityConfig = {
       label: 'Total Amount',
       type: 'currency',
       required: true,
-      placeholder: '0.00',
+      placeholder: 'e.g., 1500.00',
       showInList: true,
       showInForm: true,
     },
@@ -110,12 +110,12 @@ export const entityConfig: EntityConfig = {
       required: false,
       placeholder: 'https://quotedrop.app/q/...',
       showInList: false,
-      showInForm: false,
+      showInForm: true,
     }
   ],
 
-  titleField: 'proposal_name',
-  descriptionField: 'client',
+  titleField: 'title',
+  descriptionField: 'client_name',
   defaultSort: { field: 'created_at', direction: 'desc' },
 
   allowCreate: true,

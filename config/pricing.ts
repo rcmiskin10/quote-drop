@@ -24,24 +24,24 @@ export const pricingConfig: {
   model: 'freemium',
 
   defaultLimits: {
-    proposals: 5
+    entities: 5
   },
 
   plans: [
     {
       id: 'free',
       name: 'Free',
-      description: 'Everything you need to start sending professional quotes',
+      description: 'Everything you need to start sending professional quotes today',
       price: { monthly: 0 },
       limits: {
-        proposals: 5
+        entities: 5
       },
       features: [
-        'Up to 5 active quotes per month',
-        'All vertical-specific templates',
-        'Shareable quote links',
-        'Real-time open & acceptance notifications',
-        'Pipeline dashboard',
+        'Up to 5 active quotes',
+        'Polished quote templates',
+        'Shareable link delivery',
+        'Instant accept notifications',
+        'Basic branding (name & logo)',
         'QuoteDrop branding on quotes'
       ],
       cta: 'Get Started Free',
@@ -49,45 +49,44 @@ export const pricingConfig: {
     {
       id: 'pro',
       name: 'Pro',
-      description: 'For freelancers ready to win more clients and look fully professional',
-      price: { monthly: 16, yearly: 144 },
+      description: 'Remove limits, add your brand, and track your win rate',
+      price: { monthly: 15, yearly: 144 },
       priceId: process.env.STRIPE_PRICE_PRO,
       limits: {
-        proposals: -1
+        entities: -1
       },
       features: [
-        'Unlimited quotes',
+        'Unlimited active quotes',
         'Remove QuoteDrop branding',
-        'Custom branding (logo & colors)',
-        'Full win/loss analytics dashboard',
-        'Automated follow-up reminders',
-        'Custom domain for quote links',
-        'PDF export',
-        'Stripe & PayPal integrations',
+        'Custom branding (logo, colors, domain)',
+        'Win/loss analytics dashboard',
+        'Smart follow-up reminders',
+        'All premium templates',
         'Priority email support'
       ],
       highlighted: true,
-      cta: 'Start Free Trial',
+      cta: 'Upgrade to Pro',
     },
     {
-      id: 'business',
-      name: 'Business',
-      description: 'For growing freelancers and small agencies scaling up',
-      price: { monthly: 29, yearly: 290 },
-      priceId: process.env.STRIPE_PRICE_BUSINESS,
+      id: 'growth',
+      name: 'Growth',
+      description: 'For power users and micro-agencies who want every edge',
+      price: { monthly: 35, yearly: 348 },
+      priceId: process.env.STRIPE_PRICE_GROWTH,
       limits: {
-        proposals: -1
+        entities: -1
       },
       features: [
         'Everything in Pro',
-        'Team collaboration (up to 5 users)',
-        'Client portal',
-        'API access',
-        'AI-powered close rate insights',
-        'White-label capabilities',
-        'Dedicated account support'
+        'AI-powered quote suggestions',
+        'Client activity timeline',
+        'Quote versioning & A/B testing',
+        'Stripe & FreshBooks integrations',
+        'Team collaboration (up to 3 seats)',
+        'API access & Zapier webhooks',
+        'Priority chat support'
       ],
-      cta: 'Contact Sales',
+      cta: 'Start Growth Plan',
     }
   ],
 }
